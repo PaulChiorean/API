@@ -11,11 +11,7 @@ function regenerateDb(){
     requestDb.open('GET', 'https://games-world.herokuapp.com/regenerate-games');
     requestDb.send();
 }
-function createGame(){
-	var requestcreateGame = new XMLHttpRequest();
-	requestcreateGame.open('POST', 'https://games-world.herokuapp.com/games');
-	requestcreateGame.send();
-}
+
 request.onreadystatechange = function() {
 	if ((request.readyState === 4) && (request.status===200)) {
 		var items = JSON.parse(request.responseText);
